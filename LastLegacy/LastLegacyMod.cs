@@ -1,11 +1,11 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 using STRINGS;
 
 namespace LastLegacy
 {
     [HarmonyPatch(typeof(MinionModifiers), "OnDeath")]
-    public class LastLegacyMod
+    public class LastLegacyMod : KMod.UserMod2
     {
 
         [HarmonyPostfix]

@@ -1,10 +1,10 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 
 namespace SuperLightBug
 {
     [HarmonyPatch(typeof(BaseLightBugConfig), "BaseLightBug")]
-    public class SuperLightBugMod
+    public class SuperLightBugMod : KMod.UserMod2
     {
         [HarmonyPostfix]
         public static void BaseLightBugPost(GameObject __result)
